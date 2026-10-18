@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+/* Cormorant Garamond has no Mongolian Ө and Ү. Draw only those four letters from PT Serif, scaled to match its small x-height. */
+@font-face {
+  font-family: "Mn Glyphs";
+  font-style: normal;
+  font-weight: 100 500;
+  font-display: swap;
+  size-adjust: 80%;
+  unicode-range: U+04AE-04AF, U+04E8-04E9;
+  src: url("/fonts/pt-serif-cyrillic-ext-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Mn Glyphs";
+  font-style: normal;
+  font-weight: 600 900;
+  font-display: swap;
+  size-adjust: 80%;
+  unicode-range: U+04AE-04AF, U+04E8-04E9;
+  src: url("/fonts/pt-serif-cyrillic-ext-700-normal.woff2") format("woff2");
+}
+
 @theme {
   --color-ivory: #f5f0e8;
   --color-paper: #fbf8f3;
@@ -22,7 +42,7 @@
   --color-danger-soft: #f6e1de;
 
   --font-sans: "Inter Variable", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-display: "Mn Glyphs", "Cormorant Garamond", "Times New Roman", serif;
 
   --radius-sm: 6px;
   --radius-md: 10px;
