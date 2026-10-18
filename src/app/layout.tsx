@@ -9,6 +9,9 @@ import { ToastProvider } from "@/components/ui/toast";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
+// Pages read live data (database, session cookie); never prerender them at build time.
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
